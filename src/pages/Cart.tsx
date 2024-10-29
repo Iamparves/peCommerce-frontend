@@ -3,7 +3,7 @@ import CartItem from "@/components/Cart/CartItem";
 import SectionTop from "@/components/shared/SectionTop";
 import { Link } from "react-router-dom";
 
-const wishlist = [
+const cartItems = [
   {
     id: 1,
     name: "Realinn Under Sink Organizer and Storage for Kitchen",
@@ -45,7 +45,7 @@ const Cart = () => {
               <h5 className="w-32">Subtotal</h5>
               <h5 className="w-20">Action</h5>
             </div>
-            {wishlist.map((product) => (
+            {cartItems.map((product) => (
               <CartItem key={product.id} product={product} />
             ))}
           </div>

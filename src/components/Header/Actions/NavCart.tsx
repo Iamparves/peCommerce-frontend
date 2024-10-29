@@ -38,7 +38,7 @@ const NavCart = () => {
   const [openCart, setOpenCart] = useState(false);
 
   const handleOpenCart = () => {
-    setOpenCart(!openCart);
+    setOpenCart(true);
   };
 
   const handleCloseCart = () => {
@@ -54,9 +54,9 @@ const NavCart = () => {
         </span>
       </button>
       <Sheet open={openCart} onOpenChange={setOpenCart}>
-        <SheetContent className="max-w-[320px] px-3.5 py-5 sm:max-w-[360px] sm:px-5">
+        <SheetContent className="max-w-[320px] p-0 sm:max-w-[360px]">
           <SheetHeader>
-            <SheetTitle className="grid grid-cols-[1fr_auto] items-center gap-5 border-b pb-2">
+            <SheetTitle className="grid grid-cols-[1fr_auto] items-center gap-5 border-b px-3.5 pb-2 pt-5 sm:px-5">
               <span className="block text-left text-lg font-semibold sm:text-xl">
                 Shopping Cart
               </span>
@@ -68,56 +68,56 @@ const NavCart = () => {
               </button>
             </SheetTitle>
             <SheetDescription className="hidden"></SheetDescription>
-            <ScrollArea className="h-[calc(100vh-84px)] w-full">
-              <div className="flex flex-col gap-5 pb-4 pt-3">
-                {cart.map((item) => (
-                  <div
-                    key={item.id}
-                    className="grid grid-cols-[auto_1fr_auto] gap-2.5"
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="aspect-[4/5] min-h-full w-16 object-cover"
-                    />
-                    <div className="text-left">
-                      <h4 className="mb-2 text-[15px] font-medium leading-tight text-[#000]">
-                        {item.name}
-                      </h4>
-                      <p className="flex items-center gap-1 text-[15px] font-medium text-[#333]">
-                        1 <X className="size-3" /> ${item.price}
-                      </p>
-                    </div>
-                    <button className="size-4">
-                      <Trash2 className="size-full" />
-                    </button>
-                  </div>
-                ))}
-              </div>
-              <div className="flex w-full items-center justify-between py-3">
-                <h4 className="text-lg font-semibold text-[#1f1f1f]">
-                  Subtotal:
-                </h4>
-                <p className="font-medium text-[#333]">$95.14</p>
-              </div>
-              <div className="space-y-2">
-                <Link
-                  to="/cart"
-                  onClick={handleCloseCart}
-                  className="block bg-[#1f1f1f] py-3.5 text-center font-semibold text-white duration-300 hover:bg-[#FF2F2F] sm:py-[15px]"
-                >
-                  View Cart
-                </Link>
-                <Link
-                  to="/checkout"
-                  onClick={handleCloseCart}
-                  className="block bg-[#1f1f1f] py-3.5 text-center font-semibold text-white duration-300 hover:bg-[#FF2F2F] sm:py-[15px]"
-                >
-                  Checkout
-                </Link>
-              </div>
-            </ScrollArea>
           </SheetHeader>
+          <ScrollArea className="h-[calc(100vh-58px)] w-full px-3.5 pb-5 pt-3 sm:px-5">
+            <div className="flex flex-col gap-5 pb-4 pt-3">
+              {cart.map((item) => (
+                <div
+                  key={item.id}
+                  className="grid grid-cols-[auto_1fr_auto] gap-2.5"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="aspect-[4/5] min-h-full w-16 object-cover"
+                  />
+                  <div className="text-left">
+                    <h4 className="mb-2 text-[15px] font-medium leading-tight text-[#000]">
+                      {item.name}
+                    </h4>
+                    <p className="flex items-center gap-1 text-[15px] font-medium text-[#333]">
+                      1 <X className="size-3" /> ${item.price}
+                    </p>
+                  </div>
+                  <button className="size-4">
+                    <Trash2 className="size-full" />
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="flex w-full items-center justify-between py-3">
+              <h4 className="text-lg font-semibold text-[#1f1f1f]">
+                Subtotal:
+              </h4>
+              <p className="font-medium text-[#333]">$95.14</p>
+            </div>
+            <div className="space-y-2">
+              <Link
+                to="/cart"
+                onClick={handleCloseCart}
+                className="block bg-[#1f1f1f] py-3.5 text-center font-semibold text-white duration-300 hover:bg-[#FF2F2F] sm:py-[15px]"
+              >
+                View Cart
+              </Link>
+              <Link
+                to="/checkout"
+                onClick={handleCloseCart}
+                className="block bg-[#1f1f1f] py-3.5 text-center font-semibold text-white duration-300 hover:bg-[#FF2F2F] sm:py-[15px]"
+              >
+                Checkout
+              </Link>
+            </div>
+          </ScrollArea>
         </SheetContent>
       </Sheet>
     </div>

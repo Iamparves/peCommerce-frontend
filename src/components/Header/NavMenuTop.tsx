@@ -1,12 +1,13 @@
 import useLocalStore from "@/store";
-import { Heart, Menu, UserRound } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import NavAccount from "./Actions/NavAccount";
 import NavCart from "./Actions/NavCart";
+import NavWishlist from "./Actions/NavWishlist";
 import NavbarSearch from "./NavbarSearch";
 
 const NavMenuTop = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const setIsMenuOpen = useLocalStore((state) => state.setIsMenuOpen);
 
@@ -33,19 +34,8 @@ const NavMenuTop = () => {
         </Link>
         <NavbarSearch />
         <div className="flex items-center gap-2.5 sm:gap-5">
-          <div className="">
-            <button className="block text-white">
-              <UserRound className="size-6" />
-            </button>
-          </div>
-          <div className="">
-            <button
-              onClick={() => navigate("wishlist")}
-              className="block text-white"
-            >
-              <Heart className="size-6" />
-            </button>
-          </div>
+          <NavAccount />
+          <NavWishlist />
           <NavCart />
         </div>
       </div>
