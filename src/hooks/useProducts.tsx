@@ -1,0 +1,96 @@
+const products = [
+  {
+    _id: "1",
+    name: "White Ceramic Vases - 3 Small Ribbed Vase for Flowers",
+    rating: 4,
+    reviewCount: 182,
+    price: 25,
+    discount: 0,
+    images: [
+      "/images/top-rated/product-1.jpg",
+      "/images/top-rated/product-2.jpg",
+    ],
+    category: "Accessories",
+    isNew: true,
+    onSale: false,
+  },
+  {
+    _id: "2",
+    name: "Realinn Under Sink Organizer and Storage for Kitchen",
+    rating: 4.5,
+    reviewCount: 8484,
+    price: 30,
+    discount: 15,
+    images: [
+      "/images/top-rated/product-3.jpg",
+      "/images/top-rated/product-4.jpg",
+    ],
+    category: "Home & Kitchen",
+    isNew: false,
+    onSale: true,
+  },
+  {
+    _id: "3",
+    name: "Push Around Buggy Kids Push Car for Kids",
+    rating: 4.7,
+    reviewCount: 842,
+    price: 60.99,
+    discount: 20,
+    images: [
+      "/images/top-rated/product-5.jpg",
+      "/images/top-rated/product-6.jpg",
+    ],
+    category: "Toys & Hobbies",
+    isNew: true,
+    onSale: true,
+  },
+  {
+    _id: "4",
+    name: "Sony Noise Canceling Wireless Headphone",
+    rating: 4.4,
+    reviewCount: 728,
+    price: 65.14,
+    discount: 10,
+    images: [
+      "/images/top-rated/product-7.jpg",
+      "/images/top-rated/product-8.jpg",
+    ],
+    category: "Electronics",
+    isNew: false,
+    onSale: false,
+  },
+  {
+    _id: "5",
+    name: "Samsung Watch FE 40mm Bluetooth AI Smartwatch",
+    rating: 4,
+    reviewCount: 69,
+    price: 139.99,
+    discount: 0,
+    images: [
+      "/images/top-rated/product-9.jpg",
+      "/images/top-rated/product-10.jpg",
+    ],
+    category: "Electronics",
+    isNew: false,
+    onSale: false,
+  },
+  {
+    _id: "6",
+    name: "Hanes EcoSmart Cotton-Blend Sweatshirt for Men",
+    rating: 4.5,
+    reviewCount: 102,
+    price: 10.99,
+    discount: 0,
+    images: [
+      "/images/top-rated/product-11.jpg",
+      "/images/top-rated/product-12.jpg",
+    ],
+    category: "Clothing",
+    isNew: false,
+    onSale: false,
+  },
+];
+
+const useProducts = () => products;
+
+export default useProducts;
