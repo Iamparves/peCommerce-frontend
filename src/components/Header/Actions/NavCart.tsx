@@ -54,7 +54,7 @@ const NavCart = () => {
         </span>
       </button>
       <Sheet open={openCart} onOpenChange={setOpenCart}>
-        <SheetContent className="max-w-[320px] p-0 sm:max-w-[360px]">
+        <SheetContent className="w-full max-w-[320px] p-0 sm:max-w-[360px]">
           <SheetHeader>
             <SheetTitle className="grid grid-cols-[1fr_auto] items-center gap-5 border-b px-3.5 pb-2 pt-5 sm:px-5">
               <span className="block text-left text-lg font-semibold sm:text-xl">
@@ -76,15 +76,20 @@ const NavCart = () => {
                   key={item.id}
                   className="grid grid-cols-[auto_1fr_auto] gap-2.5"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="aspect-[4/5] min-h-full w-16 object-cover"
-                  />
+                  <Link className="block" to={`/shop/${item.id}`}>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="aspect-[4/5] min-h-full w-16 object-cover"
+                    />
+                  </Link>
                   <div className="text-left">
-                    <h4 className="mb-2 text-[15px] font-medium leading-tight text-[#000]">
+                    <Link
+                      to={`/shop/${item.id}`}
+                      className="mb-2 block text-[15px] font-medium leading-tight text-[#000]"
+                    >
                       {item.name}
-                    </h4>
+                    </Link>
                     <p className="flex items-center gap-1 text-[15px] font-medium text-[#333]">
                       1 <X className="size-3" /> ${item.price}
                     </p>
@@ -101,7 +106,7 @@ const NavCart = () => {
               </h4>
               <p className="font-medium text-[#333]">$95.14</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <Link
                 to="/cart"
                 onClick={handleCloseCart}
