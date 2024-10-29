@@ -7,8 +7,8 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { ShoppingCart, Trash2, X } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const cart = [
   {
@@ -35,6 +35,7 @@ const cart = [
 ];
 
 const NavCart = () => {
+  const location = useLocation();
   const [openCart, setOpenCart] = useState(false);
 
   const handleOpenCart = () => {
@@ -44,6 +45,10 @@ const NavCart = () => {
   const handleCloseCart = () => {
     setOpenCart(false);
   };
+
+  useEffect(() => {
+    handleCloseCart();
+  }, [location.pathname]);
 
   return (
     <div>
