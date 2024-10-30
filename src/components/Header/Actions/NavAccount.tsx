@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import useLocalStore from "@/store";
-import { UserRound } from "lucide-react";
+import { LogOut, UserRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -56,6 +56,25 @@ const NavAccount = () => {
                 Sign up
               </Link>
             </p>
+          </div>
+        )}
+        {isLoggedIn && (
+          <div>
+            <p className="mb-4 leading-tight text-gray-500">
+              Welcome back,{" "}
+              <span className="font-medium text-black">Hotaro Oreki</span>
+            </p>
+            <Link
+              to="account"
+              className="block rounded-lg bg-black px-3 py-3 text-center text-sm font-semibold uppercase text-white duration-200 hover:bg-[#D2EF9A] hover:text-black"
+            >
+              Dashboard
+            </Link>
+            <button className="group relative mx-auto mt-4 flex items-center justify-center gap-1.5 py-0.5 text-[15px] font-medium text-gray-600 duration-300 hover:text-black">
+              <LogOut className="size-[18px]" />
+              <span>Logout</span>
+              <span className="absolute bottom-0 left-0 block h-0.5 w-0 bg-black duration-300 group-hover:w-full"></span>
+            </button>
           </div>
         )}
       </div>
