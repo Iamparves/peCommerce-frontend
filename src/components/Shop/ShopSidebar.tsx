@@ -1,8 +1,10 @@
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
-import { Checkbox } from "../ui/checkbox";
-import { Input } from "../ui/input";
 import { ScrollArea } from "../ui/scroll-area";
+import ShopCategories from "./Filters/ShopCategories";
+import ShopColors from "./Filters/ShopColors";
+import ShopPriceRange from "./Filters/ShopPriceRange";
+import ShopSize from "./Filters/ShopSize";
 import ShopSearch from "./ShopSearch";
 
 interface ShopSidebarProps {
@@ -45,69 +47,10 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
             </button>
           </div>
           <ShopSearch />
-          <div className="border-b py-10">
-            <h3 className="mb-4 text-xl font-semibold">Categories</h3>
-            <div className="flex flex-col items-start gap-2.5 text-[15px] text-[#696c70]">
-              <button className="duration-200 hover:text-[#FF2F2F]">
-                T-Shirt
-              </button>
-              <button className="duration-200 hover:text-[#FF2F2F]">
-                Dress
-              </button>
-              <button className="duration-200 hover:text-[#FF2F2F]">Top</button>
-              <button className="duration-200 hover:text-[#FF2F2F]">
-                Swimwear
-              </button>
-              <button className="duration-200 hover:text-[#FF2F2F]">
-                Shirt
-              </button>
-              <button className="duration-200 hover:text-[#FF2F2F]">
-                Accessories
-              </button>
-            </div>
-          </div>
-          <div className="border-b py-10">
-            <h3 className="mb-4 text-xl font-semibold">Price Range</h3>
-            <div className="mb-3 grid grid-cols-2 gap-2.5">
-              <Input placeholder="Min" className="rounded-none text-[15px]" />
-              <Input placeholder="Max" className="rounded-none text-[15px]" />
-            </div>
-            <button className="block bg-black px-3 py-[5px] text-sm font-medium text-white duration-200 hover:bg-[#FF2F2F]">
-              Filter
-            </button>
-          </div>
-          <div className="border-b py-10">
-            <h3 className="mb-4 text-xl font-semibold">Size</h3>
-            <div className="flex flex-col gap-3">
-              {["S", "M", "L", "XL", "XXL"].map((size) => (
-                <div
-                  key={size}
-                  className="grid cursor-pointer grid-cols-[auto_1fr] items-center text-[15px] duration-300 hover:text-[#FF2F2F]"
-                >
-                  <Checkbox id={size} className="size-4 border-gray-300" />
-                  <label className="cursor-pointer pl-2" htmlFor={size}>
-                    {size}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="py-10 pb-0">
-            <h3 className="mb-4 text-xl font-semibold">Color</h3>
-            <div className="flex flex-col gap-3">
-              {["Green", "Cream", "Blue", "Black"].map((size) => (
-                <div
-                  key={size}
-                  className="grid cursor-pointer grid-cols-[auto_1fr] items-center text-[15px] duration-300 hover:text-[#FF2F2F]"
-                >
-                  <Checkbox id={size} className="size-4 border-gray-300" />
-                  <label className="cursor-pointer pl-2" htmlFor={size}>
-                    {size}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </div>
+          <ShopCategories />
+          <ShopPriceRange />
+          <ShopSize />
+          <ShopColors />
         </div>
       </ScrollArea>
     </div>
