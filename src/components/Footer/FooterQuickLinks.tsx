@@ -11,8 +11,8 @@ const footerLinks = {
       link: "/account",
     },
     {
-      title: "Order & Returns",
-      link: "/order-returns",
+      title: "Order Tracking",
+      link: "/order-tracking",
     },
     {
       title: "FAQs",

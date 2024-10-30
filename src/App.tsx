@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import OrderTracking from "./pages/OrderTracking";
 import PageNotFound from "./pages/PageNotFound";
 import ProductDetails from "./pages/ProductDetails";
 import Shop from "./pages/Shop";
@@ -38,6 +39,7 @@ function App() {
           <Route path="faqs" element={<Faqs />} />
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
+          <Route path="order-tracking" element={<OrderTracking />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
