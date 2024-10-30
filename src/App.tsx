@@ -10,9 +10,11 @@ import Categories from "./pages/Categories";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import ProductDetails from "./pages/ProductDetails";
 import Shop from "./pages/Shop";
+import Signup from "./pages/Signup";
 import SingleBlog from "./pages/SingleBlog";
 import Wishlist from "./pages/Wishlist";
 
@@ -34,6 +36,8 @@ function App() {
           <Route path="blog/:blogSlug" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faqs" element={<Faqs />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

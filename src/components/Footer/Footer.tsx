@@ -3,11 +3,11 @@ import FooterQuickLinks from "./FooterQuickLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F7F7F7]">
+    <footer className="bg-[#1A1A1A]">
       <div className="container">
         <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-[1fr_auto] lg:grid-cols-[auto_1fr_auto]">
-          <div className="min-w-[280px] max-w-lg text-[#1f1f1f] md:col-span-2 lg:col-span-1 lg:max-w-xs">
-            <h2 className="mb-4 text-2xl font-bold">Posh Coder</h2>
+          <div className="min-w-[280px] max-w-lg text-[#999] md:col-span-2 lg:col-span-1 lg:max-w-xs">
+            <h2 className="mb-4 text-2xl font-bold text-white">Posh Coder</h2>
             <div className="mb-4 grid grid-cols-[auto_1fr] gap-4">
               <p className="w-[65px] font-semibold">Mail:</p>
               <p>poshcoderbd@gmail.com</p>
@@ -25,11 +25,11 @@ const Footer = () => {
           <FooterNewsletter />
         </div>
         <div className="flex flex-col items-center justify-between gap-3 border-t py-3 sm:flex-row">
-          <p className="text-sm text-[#696c70]">
+          <p className="text-sm text-[#ddd]">
             &copy;{new Date().getFullYear()} Posh Coder. All Rights Reserved
           </p>
           <div className="flex items-center gap-2">
-            <p className="text-sm text-[#696c70]">Payment:</p>
+            <p className="text-sm text-[#ddd]">Payment:</p>
             <img
               src="/images/payments/bKash.png"
               alt="bKash"

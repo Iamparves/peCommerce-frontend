@@ -4,8 +4,10 @@ import { Input } from "../ui/input";
 
 const FooterNewsletter = () => {
   return (
-    <div className="w-full max-w-sm text-[#1f1f1f] md:max-w-[260px] lg:max-w-[300px]">
-      <h3 className="mb-4 text-sm font-semibold uppercase">Newsletter</h3>
+    <div className="w-full max-w-sm text-[#999] md:max-w-[260px] lg:max-w-[300px]">
+      <h3 className="mb-4 text-sm font-semibold uppercase text-[#fff]">
+        Newsletter
+      </h3>
       <p className="text-[15px]">
         Sign up for our newsletter and get 10% off your first purchase
       </p>

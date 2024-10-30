@@ -63,52 +63,56 @@ const footerLinks = {
 
 const FooterQuickLinks = () => {
   return (
-    <div className="flex flex-col flex-wrap justify-between gap-10 text-[#1f1f1f] sm:flex-row md:flex-nowrap lg:flex-wrap xl:justify-around">
+    <div className="flex flex-col flex-wrap justify-between gap-10 text-[#999] sm:flex-row md:flex-nowrap lg:flex-wrap xl:justify-around">
       <div>
-        <h3 className="mb-4 text-sm font-semibold uppercase">Information</h3>
+        <h3 className="mb-4 text-sm font-semibold uppercase text-[#fff]">
+          Information
+        </h3>
         <ul className="flex flex-col items-start gap-2.5">
           {footerLinks.information.map((link) => (
             <li key={link.title}>
               <Link
-                className="group relative block py-[1px] text-sm"
+                className="group relative block py-[1px] text-sm duration-300 hover:text-[#ddd]"
                 to={link.link}
               >
                 {link.title}
-                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-black duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#ddd] duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}
         </ul>
       </div>
       <div>
-        <h3 className="mb-4 text-sm font-semibold uppercase">Quick Shop</h3>
+        <h3 className="mb-4 text-sm font-semibold uppercase text-[#fff]">
+          Quick Shop
+        </h3>
         <ul className="flex flex-col items-start gap-2.5">
           {footerLinks.quickShop.map((link) => (
             <li key={link.title}>
               <Link
-                className="group relative block py-[1px] text-sm"
+                className="group relative block py-[1px] text-sm duration-300 hover:text-[#ddd]"
                 to={link.link}
               >
                 {link.title}
-                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-black duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#ddd] duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}
         </ul>
       </div>
       <div>
-        <h3 className="mb-4 text-sm font-semibold uppercase">
+        <h3 className="mb-4 text-sm font-semibold uppercase text-[#fff]">
           Customer Services
         </h3>
         <ul className="flex flex-col items-start gap-2.5">
           {footerLinks.customerServices.map((link) => (
             <li key={link.title}>
               <Link
-                className="group relative block py-[1px] text-sm"
+                className="group relative block py-[1px] text-sm duration-300 hover:text-[#ddd]"
                 to={link.link}
               >
                 {link.title}
-                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-black duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#ddd] duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}

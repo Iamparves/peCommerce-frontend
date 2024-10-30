@@ -37,7 +37,7 @@ const CustomFormField: React.FC<CustomFormFieldProps> = ({
       name={name}
       render={({ field }) => (
         <FormItem className={"space-y-1"}>
-          {label && <FormLabel>{label}</FormLabel>}
+          {label && <FormLabel className="font-semibold">{label}</FormLabel>}
           <FormControl>
             {!isTextArea ? (
               <Input
