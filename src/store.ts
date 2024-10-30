@@ -8,7 +8,7 @@ export interface TStore {
 }
 
 const useLocalStore = create<TStore>((set) => ({
-  isLoggedIn: false,
+  isLoggedIn: true,
   setIsLoggedIn: (isLoggedIn) => set({ isLoggedIn }),
   isMenuOpen: false,
   setIsMenuOpen: (isMenuOpen) => set({ isMenuOpen }),

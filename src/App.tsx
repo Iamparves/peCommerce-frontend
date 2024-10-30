@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster } from "sonner";
 import "./App.css";
 import Layout from "./components/shared/Layout";
@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import MyAccount from "./pages/MyAccount";
 import OrderTracking from "./pages/OrderTracking";
 import PageNotFound from "./pages/PageNotFound";
 import ProductDetails from "./pages/ProductDetails";
@@ -40,6 +41,10 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
           <Route path="order-tracking" element={<OrderTracking />} />
+          <Route path="account" element={<MyAccount />}>
+            <Route path="" element={<Navigate to="dashboard" />} />
+            <Route path="*" element={<h2>Hello World</h2>} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

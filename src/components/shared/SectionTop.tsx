@@ -21,7 +21,7 @@ const SectionTop: React.FC<SectionTopProps> = ({
       <div className="container">
         <h1
           className={cn(
-            "text-center text-4xl font-semibold text-black sm:text-5xl md:text-6xl",
+            "text-center text-4xl font-semibold text-black sm:text-5xl",
             titleClass,
           )}
         >
