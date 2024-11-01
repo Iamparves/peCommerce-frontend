@@ -3,6 +3,11 @@ import { Toaster } from "sonner";
 import "./App.css";
 import Layout from "./components/shared/Layout";
 import About from "./pages/About";
+import Addresses from "./pages/Accounts/Addresses";
+import Dashboard from "./pages/Accounts/Dashboard";
+import Orders from "./pages/Accounts/Orders";
+import Security from "./pages/Accounts/Security";
+import Settings from "./pages/Accounts/Settings";
 import Blog from "./pages/Blog";
 import Brands from "./pages/Brands";
 import Cart from "./pages/Cart";
@@ -43,7 +48,11 @@ function App() {
           <Route path="order-tracking" element={<OrderTracking />} />
           <Route path="account" element={<MyAccount />}>
             <Route path="" element={<Navigate to="dashboard" />} />
-            <Route path="*" element={<h2>Hello World</h2>} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="addresses" element={<Addresses />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="security" element={<Security />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>

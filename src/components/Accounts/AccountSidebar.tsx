@@ -1,4 +1,4 @@
-import { House, LogOut, Package, Settings, Tag } from "lucide-react";
+import { House, Lock, LogOut, Package, Settings, Tag } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const sidebarItems = [
@@ -24,6 +24,11 @@ const sidebarItems = [
     link: "/account/settings",
   },
   {
+    title: "Security",
+    icon: <Lock className="size-full" />,
+    link: "/account/security",
+  },
+  {
     title: "Logout",
     icon: <LogOut className="size-full" />,
     link: "/account/logout",
@@ -47,7 +52,7 @@ const AccountSidebar = () => {
           <NavLink
             key={index}
             to={item.link}
-            className="flex items-center gap-3 rounded-lg px-5 py-3 font-semibold duration-200 hover:bg-white lg:py-4 lg:text-lg [&.active]:bg-white"
+            className="flex items-center gap-3 rounded-lg px-5 py-3 font-semibold duration-200 hover:bg-white lg:py-4 lg:text-lg xl:text-xl [&.active]:bg-white"
           >
             <span className="size-[18px] lg:size-5">{item.icon}</span>
             <span>{item.title}</span>

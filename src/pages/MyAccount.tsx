@@ -8,7 +8,7 @@ const MyAccount = () => {
       <SectionTop title="My Account" />
       <section className="bg-white py-16 md:py-20">
         <div className="container">
-          <div className="grid grid-cols-1 gap-7 md:grid-cols-[auto_1fr] lg:gap-10 xl:gap-[60px]">
+          <div className="grid grid-cols-1 items-start gap-7 md:grid-cols-[auto_1fr] lg:gap-10 xl:gap-[60px]">
             <AccountSidebar />
             <Outlet />
           </div>
